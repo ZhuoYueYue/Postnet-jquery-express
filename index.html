@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Postnet Jquery Demo</title>
+	<script src="./node_modules/jquery/dist/jquery.js"></script>
+	<link rel="stylesheet" href="./index.css">
+</head>
+<body>
+	<pre id="console"></pre>
+	<div>
+	<input id="input" type="text"/>
+		<!--onfocus="this.value=''"-->
+	<button onclick="send()">Send</button>
+	</div>
+	<script>
+		$(document).ready(function () {
+			$('#input').focus(function () {
+				//alert("a");
+				$('#input').attr({"value":""});
+			})
+		});
+	</script>
+	<script src="./index.js"></script>
+</body>
+</html>
